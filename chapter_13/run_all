@@ -1,0 +1,12 @@
+python3 -W ignore mnist_cnn_exp0.py
+python3 -W ignore mnist_cnn_exp1.py
+python3 -W ignore mnist_cnn_exp2.py
+python3 -W ignore mnist_cnn_exp3.py
+python3 -W ignore mnist_cnn_exp4.py
+python3 -W ignore mnist_cnn_exp5.py
+python3 -W ignore mnist_cnn_exp6.py
+python3 -W ignore mnist_cnn_exp7.py
+python3 -W ignore mnist_cnn_exp8.py
+python3 -W ignore mnist_cnn_exp9.py
+python3 -W ignore mnist_cnn_exp10.py
+
