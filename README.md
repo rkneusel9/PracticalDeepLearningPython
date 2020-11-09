@@ -1,5 +1,5 @@
-Source code for "Practical Deep Learning with Python: A Hands-On Approach"
---------------------------------------------------------------------------
+Source code for "Practical Deep Learning with Python: A Hands-On Introduction"
+------------------------------------------------------------------------------
 
 You'll find the source code included or referenced in the book in this
 archive.  The code is organized by chapter.  If the chapter is not listed,
