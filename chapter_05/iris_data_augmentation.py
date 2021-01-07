@@ -12,8 +12,8 @@ def generateData(pca, x, start):
     return b
 
 def main():
-    x = np.load("iris_features.npy")
-    y = np.load("iris_labels.npy")
+    x = np.load("../data/iris/iris_features.npy")
+    y = np.load("../data/iris/iris_labels.npy")
 
     N = 120
     x_train = x[:N]
@@ -43,10 +43,10 @@ def main():
     newx = newx[idx]
     newy = newy[idx]
 
-    np.save("iris_train_features_augmented.npy", newx)
-    np.save("iris_train_labels_augmented.npy", newy)
-    np.save("iris_test_features_augmented.npy", x_test)
-    np.save("iris_test_labels_augmented.npy", y_test)
+    np.save("../data/iris/iris_train_features_augmented.npy", newx)
+    np.save("../data/iris/iris_train_labels_augmented.npy", newy)
+    np.save("../data/iris/iris_test_features_augmented.npy", x_test)
+    np.save("../data/iris/iris_test_labels_augmented.npy", y_test)
 
 main()
 

@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pylab as plt 
 from sklearn import decomposition
 
-x = np.load("../../../data/iris/iris_features.npy")[:,:2]
-y = np.load("../../../data/iris/iris_labels.npy")
+x = np.load("../data/iris/iris_features.npy")[:,:2]
+y = np.load("../data/iris/iris_labels.npy")
 idx = np.where(y != 0)
 x = x[idx]
 x[:,0] -= x[:,0].mean()

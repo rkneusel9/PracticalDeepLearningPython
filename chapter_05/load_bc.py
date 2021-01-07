@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open("wdbc.data") as f:
+with open("../data/breast/wdbc.data") as f:
     lines = [i[:-1] for i in f.readlines() if i != ""] 
 
 n = ["B","M"]
@@ -12,9 +12,9 @@ x = x[i]
 y = y[i]
 z = (y - y.mean(axis=0)) / y.std(axis=0)
 
-np.save("bc_features.npy", y)
-np.save("bc_features_standard.npy", z)
-np.save("bc_labels.npy", x)
+np.save("../data/breast/bc_features.npy", y)
+np.save("../data/breast/bc_features_standard.npy", z)
+np.save("../data/breast/bc_labels.npy", x)
 plt.boxplot(z)
 plt.show()
 
