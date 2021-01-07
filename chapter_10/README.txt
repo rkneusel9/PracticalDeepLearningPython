@@ -6,6 +6,6 @@ book.
 
 The remaining files are the different experiment versions that
 are not called out explicitly in the text.  Not all of these
-were necessarily used in the text but will help people wanting
-to experiment.
+were necessarily used in the text, but they will help people
+who want to experiment.
 

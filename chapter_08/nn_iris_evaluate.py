@@ -20,9 +20,9 @@ def evaluate(x, y, w):
             nw += 1
     return [float(nc) / float(nc + nw), prob]
 
-xtest = np.load("iris2_test.npy")
-ytest = np.load("iris2_test_labels.npy")
-weights = pickle.load(open("iris2_weights.pkl","rb"))
+xtest = np.load("../data/iris/iris2_test.npy")
+ytest = np.load("../data/iris/iris2_test_labels.npy")
+weights = pickle.load(open("../data/iris/iris2_weights.pkl","rb"))
 score, prob = evaluate(xtest, ytest, weights)
 print()
 for i in range(len(prob)):

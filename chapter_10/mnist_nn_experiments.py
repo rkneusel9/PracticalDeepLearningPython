@@ -23,10 +23,10 @@ def nn(layers, act):
             hidden_layer_sizes=layers, activation=act)
 
 def main():
-    x_train = np.load("../../../data/mnist/mnist_train_vectors.npy").astype("float64")/256.0
-    y_train = np.load("../../../data/mnist/mnist_train_labels.npy")
-    x_test = np.load("../../../data/mnist/mnist_test_vectors.npy").astype("float64")/256.0
-    y_test = np.load("../../../data/mnist/mnist_test_labels.npy")
+    x_train = np.load("../data/mnist/mnist_train_vectors.npy").astype("float64")/256.0
+    y_train = np.load("../data/mnist/mnist_train_labels.npy")
+    x_test = np.load("../data/mnist/mnist_test_vectors.npy").astype("float64")/256.0
+    y_test = np.load("../data/mnist/mnist_test_labels.npy")
 
     N = 1000
     x_train = x_train[:N]

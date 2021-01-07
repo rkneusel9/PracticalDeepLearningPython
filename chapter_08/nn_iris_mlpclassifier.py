@@ -2,10 +2,10 @@ import numpy as np
 import pickle
 from sklearn.neural_network import MLPClassifier
 
-xtrain= np.load("iris2_train.npy")
-ytrain= np.load("iris2_train_labels.npy")
-xtest = np.load("iris2_test.npy")
-ytest = np.load("iris2_test_labels.npy")
+xtrain= np.load("../data/iris/iris2_train.npy")
+ytrain= np.load("../data/iris/iris2_train_labels.npy")
+xtest = np.load("../data/iris/iris2_test.npy")
+ytest = np.load("../data/iris/iris2_test_labels.npy")
 
 clf = MLPClassifier(
         hidden_layer_sizes=(3,2),
@@ -24,7 +24,7 @@ b1 = clf.intercepts_[0]
 b2 = clf.intercepts_[1]
 b3 = clf.intercepts_[2]
 weights = [w12,b1,w23,b2,w34,b3]
-pickle.dump(weights, open("iris2_weights.pkl","wb"))
+pickle.dump(weights, open("../data/iris/iris2_weights.pkl","wb"))
 
 print()
 print("Test results:")

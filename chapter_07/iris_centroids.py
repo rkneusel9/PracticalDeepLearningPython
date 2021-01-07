@@ -16,8 +16,8 @@ def predict(c0,c1,c2,x):
     return p
 
 def main():
-    x = np.load("../../../data/iris/iris_features.npy")
-    y = np.load("../../../data/iris/iris_labels.npy")
+    x = np.load("../data/iris/iris_features.npy")
+    y = np.load("../data/iris/iris_labels.npy")
     N = 120
     x_train = x[:N]; x_test = x[N:]
     y_train = y[:N]; y_test = y[N:]

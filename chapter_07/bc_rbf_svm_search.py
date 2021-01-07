@@ -26,8 +26,8 @@ def split(x,y,k,m):
 
 def main():
     m = 5 
-    x = np.load("../../../data/breast/bc_features_standard.npy")
-    y = np.load("../../../data/breast/bc_labels.npy")
+    x = np.load("../data/breast/bc_features_standard.npy")
+    y = np.load("../data/breast/bc_labels.npy")
     idx = np.argsort(np.random.random(y.shape[0]))
     x = x[idx]
     y = y[idx]
