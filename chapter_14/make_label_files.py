@@ -18,8 +18,8 @@ if (len(sys.argv) == 1):
 
 class1 = eval("["+sys.argv[1]+"]")
 
-y_train = np.load("../../data/cifar10/cifar10_train_labels.npy")
-y_test  = np.load("../../data/cifar10/cifar10_test_labels.npy")
+y_train = np.load("../data/cifar10/cifar10_train_labels.npy")
+y_test  = np.load("../data/cifar10/cifar10_test_labels.npy")
 
 for i in range(len(y_train)):
     if (y_train[i] in class1):

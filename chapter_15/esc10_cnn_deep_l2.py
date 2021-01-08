@@ -21,10 +21,10 @@ num_classes = 10
 epochs = 10
 img_rows, img_cols = 100, 160
 
-x_train = np.load("esc10_spect_train_images.npy")
-y_train = np.load("esc10_spect_train_labels.npy")
-x_test = np.load("esc10_spect_test_images.npy")
-y_test = np.load("esc10_spect_test_labels.npy")
+x_train = np.load("../data/audio/ESC-10/esc10_spect_train_images.npy")
+y_train = np.load("../data/audio/ESC-10/esc10_spect_train_labels.npy")
+x_test = np.load("../data/audio/ESC-10/esc10_spect_test_images.npy")
+y_test = np.load("../data/audio/ESC-10/esc10_spect_test_labels.npy")
 
 if K.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 3, img_rows, img_cols)

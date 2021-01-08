@@ -19,10 +19,10 @@ num_classes = 10
 epochs = 16
 nsamp = (441*2,1)
 
-x_train = np.load("esc10_raw_train_audio.npy")
-y_train = np.load("esc10_raw_train_labels.npy")
-x_test  = np.load("esc10_raw_test_audio.npy")
-y_test  = np.load("esc10_raw_test_labels.npy")
+x_train = np.load("../data/audio/ESC-10/esc10_raw_train_audio.npy")
+y_train = np.load("../data/audio/ESC-10/esc10_raw_train_labels.npy")
+x_test  = np.load("../data/audio/ESC-10/esc10_raw_test_audio.npy")
+y_test  = np.load("../data/audio/ESC-10/esc10_raw_test_labels.npy")
 
 x_train = (x_train.astype('float32') + 32768) / 65536
 x_test = (x_test.astype('float32') + 32768) / 65536

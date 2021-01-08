@@ -20,10 +20,10 @@ epochs = 16
 img_rows, img_cols = 100, 160
 input_shape = (img_rows, img_cols, 3)
 
-x_train = np.load("esc10_spect_train_images.npy")
-y_train = np.load("esc10_spect_train_labels.npy")
-x_test = np.load("esc10_spect_test_images.npy")
-y_test = np.load("esc10_spect_test_labels.npy")
+x_train = np.load("../data/audio/ESC-10/esc10_spect_train_images.npy")
+y_train = np.load("../data/audio/ESC-10/esc10_spect_train_labels.npy")
+x_test = np.load("../data/audio/ESC-10/esc10_spect_test_images.npy")
+y_test = np.load("../data/audio/ESC-10/esc10_spect_test_labels.npy")
 
 x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255

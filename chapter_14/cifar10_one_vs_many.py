@@ -12,8 +12,8 @@ import numpy as np
 from keras.models import load_model
 
 def main():
-    x_test = np.load("../../data/cifar10/cifar10_test_images.npy")/255.0
-    y_test = np.load("../../data/cifar10/cifar10_test_labels.npy")
+    x_test = np.load("../data/cifar10/cifar10_test_images.npy")/255.0
+    y_test = np.load("../data/cifar10/cifar10_test_labels.npy")
 
     #  Load the models
     mm = load_model("cifar10_cnn_model.h5")

@@ -3,8 +3,8 @@ import numpy as np
 from keras.models import load_model
 
 model = load_model(sys.argv[1])
-x_test = np.load("esc10_spect_test_images.npy")/255.0
-y_test = np.load("esc10_spect_test_labels.npy")
+x_test = np.load("../data/audio/ESC-10/esc10_spect_test_images.npy")/255.0
+y_test = np.load("../data/audio/ESC-10/esc10_spect_test_labels.npy")
 
 prob = model.predict(x_test)
 p = np.argmax(prob, axis=1)

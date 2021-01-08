@@ -16,7 +16,7 @@ rows = 100
 cols = 160
 
 # train
-flist = [i[:-1] for i in open("augmented_train_filelist.txt")]
+flist = [i[:-1] for i in open("../data/audio/ESC-10/augmented_train_filelist.txt")]
 N = len(flist)
 img = np.zeros((N,rows,cols,3), dtype="uint8")
 lbl = np.zeros(N, dtype="uint8")
@@ -38,12 +38,12 @@ idx = np.argsort(np.random.random(N))
 img = img[idx]
 lbl = lbl[idx]
 p = p[idx]
-np.save("esc10_spect_train_images.npy", img)
-np.save("esc10_spect_train_labels.npy", lbl)
-np.save("esc10_spect_train_paths.npy", p)
+np.save("../data/audio/ESC-10/esc10_spect_train_images.npy", img)
+np.save("../data/audio/ESC-10/esc10_spect_train_labels.npy", lbl)
+np.save("../data/audio/ESC-10/esc10_spect_train_paths.npy", p)
 
 # test
-flist = [i[:-1] for i in open("augmented_test_filelist.txt")]
+flist = [i[:-1] for i in open("../data/audio/ESC-10/augmented_test_filelist.txt")]
 N = len(flist)
 img = np.zeros((N,rows,cols,3), dtype="uint8")
 lbl = np.zeros(N, dtype="uint8")
@@ -65,7 +65,7 @@ idx = np.argsort(np.random.random(N))
 img = img[idx]
 lbl = lbl[idx]
 p = p[idx]
-np.save("esc10_spect_test_images.npy", img)
-np.save("esc10_spect_test_labels.npy", lbl)
-np.save("esc10_spect_test_paths.npy", p)
+np.save("../data/audio/ESC-10/esc10_spect_test_images.npy", img)
+np.save("../data/audio/ESC-10/esc10_spect_test_labels.npy", lbl)
+np.save("../data/audio/ESC-10/esc10_spect_test_paths.npy", p)
 

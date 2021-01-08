@@ -15,18 +15,17 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D, Activation
 from keras import backend as K
 import numpy as np
-import pickle
 
 batch_size = 64
 num_classes = 10
 epochs = 60
 img_rows, img_cols = 32, 32
 
-x_train = np.load("../../../data/cifar10/cifar10_train_images.npy")
-y_train = np.load("../../../data/cifar10/cifar10_train_labels.npy")
+x_train = np.load("../data/cifar10/cifar10_train_images.npy")
+y_train = np.load("../data/cifar10/cifar10_train_labels.npy")
 
-x_test = np.load("../../../data/cifar10/cifar10_test_images.npy")
-y_test = np.load("../../../data/cifar10/cifar10_test_labels.npy")
+x_test = np.load("../data/cifar10/cifar10_test_images.npy")
+y_test = np.load("../data/cifar10/cifar10_test_labels.npy")
 
 if K.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 3, img_rows, img_cols)
@@ -75,5 +74,4 @@ print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
 model.save("cifar10_cnn_SGD_model.h5")
-pickle.dump(history, open("cifar10_cnn_SGD_history.pkl","wb"))
 

@@ -12,10 +12,10 @@
 import numpy as np
 from keras.models import load_model
 
-x_test = np.load("../../data/cifar10/cifar10_test_images.npy")/255.0
-y_label= np.load("../../data/cifar10/cifar10_test_labels.npy")
-y_test = np.load("cifar10_test_animal_vehicles_labels.npy")
-model = load_model("cifar10_cnn_animal_vehicles_model.h5")
+x_test = np.load("../data/cifar10/cifar10_test_images.npy")/255.0
+y_label= np.load("../data/cifar10/cifar10_test_labels.npy")
+y_test = np.load("../data/cifar10_test_animal_vehicles_labels.npy")
+model = load_model("../data/cifar10_cnn_animal_vehicles_model.h5")
 
 pp = model.predict(x_test)
 p = np.zeros(pp.shape[0], dtype="uint8")

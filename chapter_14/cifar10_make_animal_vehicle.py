@@ -11,8 +11,8 @@
 
 import numpy as np
 
-y_train = np.load("../../data/cifar10/cifar10_train_labels.npy")
-y_test  = np.load("../../data/cifar10/cifar10_test_labels.npy")
+y_train = np.load("../data/cifar10/cifar10_train_labels.npy")
+y_test  = np.load("../data/cifar10/cifar10_test_labels.npy")
 
 for i in range(len(y_train)):
     if (y_train[i] in [0,1,8,9]):
@@ -26,6 +26,6 @@ for i in range(len(y_test)):
     else:
         y_test[i] = 1
 
-np.save("../../data/cifar10/cifar10_train_animal_vehicle_labels.npy", y_train)
-np.save("../../data/cifar10/cifar10_test_animal_vehicle_labels.npy", y_test)
+np.save("../data/cifar10/cifar10_train_animal_vehicle_labels.npy", y_train)
+np.save("../data/cifar10/cifar10_test_animal_vehicle_labels.npy", y_test)
 

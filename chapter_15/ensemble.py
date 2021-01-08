@@ -10,7 +10,7 @@ p3 = np.load("prob_run3.npy")
 p4 = np.load("prob_run4.npy")
 p5 = np.load("prob_run5.npy")
 
-y_test = np.load("../../../data/audio/esc10_spect_test_labels.npy")
+y_test = np.load("../data/audio/ESC-10/esc10_spect_test_labels.npy")
 
 prob = (p0+p1+p2+p3+p4+p5)/6.0
 p = np.argmax(prob, axis=1)

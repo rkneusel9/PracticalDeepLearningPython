@@ -10,7 +10,7 @@
 
 import time
 import numpy as np
-from sklearn.neighbors.nearest_centroid import NearestCentroid
+from sklearn.neighbors import NearestCentroid
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
@@ -61,10 +61,10 @@ def main():
     """Run the experiments for the ESC-10 data"""
 
     #  Load the data and scale
-    x_train = np.load("esc10_raw_train_audio.npy")[:,:,0]
-    y_train = np.load("esc10_raw_train_labels.npy")
-    x_test  = np.load("esc10_raw_test_audio.npy")[:,:,0]
-    y_test  = np.load("esc10_raw_test_labels.npy")
+    x_train = np.load("../data/audio/ESC-10/esc10_raw_train_audio.npy")[:,:,0]
+    y_train = np.load("../data/audio/ESC-10/esc10_raw_train_labels.npy")
+    x_test  = np.load("../data/audio/ESC-10/esc10_raw_test_audio.npy")[:,:,0]
+    y_test  = np.load("../data/audio/ESC-10/esc10_raw_test_labels.npy")
 
     x_train = (x_train.astype('float32') + 32768) / 65536
     x_test = (x_test.astype('float32') + 32768) / 65536

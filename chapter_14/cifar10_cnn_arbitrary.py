@@ -28,10 +28,10 @@ epochs = 12
 
 img_rows, img_cols = 32, 32
 
-x_train = np.load("../../data/cifar10/cifar10_train_images.npy")
+x_train = np.load("../data/cifar10/cifar10_train_images.npy")
 y_train = np.load(sys.argv[1])
 
-x_test = np.load("../../data/cifar10/cifar10_test_images.npy")
+x_test = np.load("../data/cifar10/cifar10_test_images.npy")
 y_test = np.load(sys.argv[2])
 
 if K.image_data_format() == 'channels_first':

@@ -49,7 +49,7 @@ def augment_audio(src_list, typ):
     for i,s in enumerate(src_list):
         f,c = s.split()
         wav = read(f) # (sample rate, data, type)
-        base = os.path.abspath("augmented/%s/%s" % (typ, os.path.basename(f)[:-4]))
+        base = os.path.abspath("../data/audio/ESC-10/augmented/%s/%s" % (typ, os.path.basename(f)[:-4]))
         fname = base+".wav"
         write(fname, wav[0], wav[1])
         flist.append("%s %s" % (fname,c))
@@ -60,7 +60,7 @@ def augment_audio(src_list, typ):
             flist.append("%s %s" % (fname,c))
 
     random.shuffle(flist)
-    with open("augmented_%s_filelist.txt" % typ,"w") as f:
+    with open("../data/audio/ESC-10/augmented_%s_filelist.txt" % typ,"w") as f:
         for z in flist:
             f.write("%s\n" % z)
 
@@ -69,11 +69,11 @@ def main():
     N = 8  # 20%
 
     #  output directory (overwrite)
-    os.system("rm -rf augmented; mkdir augmented")
-    os.system("mkdir augmented/train augmented/test")
+    os.system("rm -rf ../data/audio/ESC-10/augmented; mkdir ../data/audio/ESC-10/augmented")
+    os.system("mkdir ../data/audio/ESC-10/augmented/train ../data/audio/ESC-10/augmented/test")
 
     #  original .wav files
-    src_list = [i[:-1] for i in open("ESC-10/filelist.txt")]
+    src_list = [i[:-1] for i in open("../data/audio/ESC-10/filelist.txt")]
 
     #  split into train/test
     z = [[] for i in range(10)]
