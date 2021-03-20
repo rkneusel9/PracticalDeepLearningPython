@@ -13,8 +13,8 @@ pca = decomposition.PCA(n_components=2)
 pca.fit(x)
 v = pca.explained_variance_ratio_
    
-plt.scatter(x[:,0],x[:,1],marker='o',color='b')
 ax = plt.axes()
+plt.scatter(x[:,0],x[:,1],marker='o',color='b')
 x0 = v[0]*pca.components_[0,0]
 y0 = v[0]*pca.components_[0,1]
 ax.arrow(0, 0, x0, y0, head_width=0.05, head_length=0.1, fc='r', ec='r')
