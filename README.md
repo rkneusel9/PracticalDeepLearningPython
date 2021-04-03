@@ -1,5 +1,5 @@
 Source code for "Practical Deep Learning: A Python-Based Introduction"
-----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 You'll find the source code included or referenced in the book in this
 archive.  The code is organized by chapter.  If the chapter is not listed,
