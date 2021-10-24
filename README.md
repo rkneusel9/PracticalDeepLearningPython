@@ -12,3 +12,8 @@ Please send questions, comments, or bugs to:
 
     practicaldeeplearningpython@gmail.com
 
+Updates:
+
+    page 84: the URL for the Iris dataset has changed:
+                https://archive.ics.uci.edu/ml/machine-learning-databases/iris/
+
