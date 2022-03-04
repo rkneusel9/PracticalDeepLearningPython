@@ -24,7 +24,7 @@ def main():
     else:
         N = 10
 
-    x_test = np.load("../../../../data/mnist/mnist_test_images.npy")
+    x_test = np.load("../../data/mnist/mnist_test_images.npy")
 
     for i in range(N):
         r,c = random.randint(6,12), random.randint(6,12)

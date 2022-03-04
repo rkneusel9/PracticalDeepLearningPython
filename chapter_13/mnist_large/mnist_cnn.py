@@ -4,16 +4,16 @@
 #  Train the base MNIST CNN model.  Keras example.
 #
 #  RTK, 20-Oct-2019
-#  Last update:  20-Oct-2019
+#  Last update:  04-Mar-2022
 #
 ################################################################
 
-import keras
-from keras.datasets import mnist
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D, MaxPooling2D, Activation
-from keras import backend as K
+import tensorflow.keras as keras
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Flatten
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Activation
+from tensorflow.keras import backend as K
 
 batch_size = 128
 num_classes = 10

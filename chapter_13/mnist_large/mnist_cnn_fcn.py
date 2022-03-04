@@ -6,13 +6,13 @@
 #  on the MNIST digits.
 #
 #  RTK, 20-Oct-2019
-#  Last update:  27-Oct-2019
+#  Last update:  04-Mar-2022
 #
 ################################################################
 
-from keras.models import Sequential, load_model
-from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Dense, Dropout, Flatten
+from tensorflow.keras.layers import Conv2D, MaxPooling2D
 
 #  Load the weights from the base model
 weights = load_model('mnist_cnn_base_model.h5').get_weights()
@@ -41,5 +41,6 @@ model.layers[4].set_weights([weights[4].reshape([12,12,64,128]), weights[5]])
 model.layers[6].set_weights([weights[6].reshape([1,1,128,10]), weights[7]])
 
 #  Output the fully convolutional model
+model.compile(optimizer='adam', loss='binary_crossentropy')
 model.save('mnist_cnn_fcn_model.h5')
 
