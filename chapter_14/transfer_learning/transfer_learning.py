@@ -2,17 +2,17 @@
 #  file:  transfer_learning.py
 #
 #  RTK, 03-Nov-2019
-#  Last update:  07-Nov-2019
+#  Last update:  27-Mar-2022
 #
 ################################################################
 
 import numpy as np
-from keras.models import load_model
-from keras import backend as K
-from keras.datasets import mnist
+from tensorflow.keras.models import load_model
+from tensorflow.keras import backend as K
+from tensorflow.keras.datasets import mnist
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors.nearest_centroid import NearestCentroid
+from sklearn.neighbors import NearestCentroid
 from sklearn.svm import LinearSVC
 from sklearn.naive_bayes import GaussianNB
 
@@ -43,8 +43,8 @@ for i in range(600):
     t[:,2:30,2:30,2] = x_train[k:(k+100)]
     _ = model.predict(t)
     out = [model.layers[5].output]
-    func = K.function([model.input, K.learning_phase()], out)
-    train[k:(k+100),:] = func([t, 1.])[0]
+    func = K.function([model.input], out)
+    train[k:(k+100),:] = func([t])[0]
     k += 100
 np.save("mnist_train_embedded.npy", train)
 
@@ -59,8 +59,8 @@ for i in range(100):
     t[:,2:30,2:30,2] = x_test[k:(k+100)]
     _ = model.predict(t)
     out = [model.layers[5].output]
-    func = K.function([model.input, K.learning_phase()], out)
-    test[k:(k+100),:] = func([t, 1.])[0]
+    func = K.function([model.input], out)
+    test[k:(k+100),:] = func([t])[0]
     k += 100
 np.save("mnist_test_embedded.npy", test)
 
