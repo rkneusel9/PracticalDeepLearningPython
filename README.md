@@ -10,7 +10,7 @@ of the book.
 
 Please send questions, comments, or bugs to:
 
-    practicaldeeplearningpython@gmail.com
+    rkneuselbooks@gmail.com
 
 Updates:
 
@@ -20,4 +20,6 @@ Updates:
     Tensorflow issues addressable with:
                 pip3 install tensorflow-cpu  (TF 2.8)
                 then update repo code to move 'keras' imports to 'tensorflow.keras'
+
+    The file '''tutorial.pdf''' is a beginner's guide to NumPy, SciPy, Matplotlib, and Pillow.
 
