@@ -21,5 +21,5 @@ Updates:
                 pip3 install tensorflow-cpu  (TF 2.8)
                 then update repo code to move 'keras' imports to 'tensorflow.keras'
 
-    The file '''tutorial.pdf''' is a beginner's guide to NumPy, SciPy, Matplotlib, and Pillow.
+    The file *tutorial.pdf* is a beginner's guide to NumPy, SciPy, Matplotlib, and Pillow.
 
