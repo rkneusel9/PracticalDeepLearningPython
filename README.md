@@ -15,7 +15,7 @@ Please send questions, comments, or bugs to:
 Updates:
 
     page 84: the URL for the Iris dataset has changed:
-                https://archive.ics.uci.edu/ml/machine-learning-databases/iris/
+                https://archive.ics.uci.edu/dataset/53/iris
 
     Tensorflow issues addressable with:
                 pip3 install tensorflow-cpu  (TF 2.8)
