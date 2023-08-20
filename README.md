@@ -17,6 +17,9 @@ Updates:
     page 84: the URL for the Iris dataset has changed:
                 https://archive.ics.uci.edu/dataset/53/iris
 
+    page 86: the URL for the Breast Cancer dataset has changed:
+                https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original
+
     Tensorflow issues addressable with:
                 pip3 install tensorflow-cpu  (TF 2.8)
                 then update repo code to move 'keras' imports to 'tensorflow.keras'
