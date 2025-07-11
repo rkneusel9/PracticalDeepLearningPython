@@ -2,7 +2,7 @@ Source code for "Practical Deep Learning: A Python-Based Introduction"
 ----------------------------------------------------------------------
 (first edition)
 
-### Code for the second edition is [here](https://github.com/rkneusel9/PracticalDeepLearning2E)
+## \*\*\* Code for the second edition is [here](https://github.com/rkneusel9/PracticalDeepLearning2E) \*\*\*
 
 You'll find the source code included or referenced in the book in this
 archive.  The code is organized by chapter.  If the chapter is not listed,
